@@ -16,15 +16,15 @@ Built with **Angular 18**, **TailwindCSS**, and custom CSS with a dark-themed gl
 
 ## Screenshots
 
-### Home Page & Product Catalog
-The main catalog view features a dark glassmorphism interface, animated gradient hero section, real-time product search, and interactive 3D product cards with inline ordering:
+### Home Page & Hero Section
+The main hero section with glassmorphism navigation, animated gradient typography, and live microservices status:
 
 ![Home Page](screenshots/home-page.png)
 
-### Add Product Page
-A frosted-glass form for creating new catalog products with floating label animations and Keycloak authentication guard:
+### 3D Product Catalog & Inline Ordering
+Interactive 3D product cards with real-time stock indicators, pricing, quantity selectors, and one-click ordering:
 
-![Add Product Page](screenshots/add-product.png)
+![Product Catalog Grid](screenshots/product-grid.png)
 
 ## How it connects
 
@@ -115,8 +115,8 @@ src/
 └── styles.css                       # Global dark theme + animations
 
 screenshots/
-├── home-page.png                    # Redesigned dark-theme catalog screenshot
-└── add-product.png                  # Add product form screenshot
+├── home-page.png                    # Hero section & search screenshot
+└── product-grid.png                 # 3D product cards & ordering grid screenshot
 
 nginx.conf                          # Production Nginx configuration
 Dockerfile                           # Multi-stage build (Node + Nginx)
