@@ -14,6 +14,18 @@ Built with **Angular 18**, **TailwindCSS**, and custom CSS with a dark-themed gl
 - Toast notifications for order success and error states
 - Responsive layout that works on mobile and desktop
 
+## Screenshots
+
+### Home Page & Product Catalog
+The main catalog view features a dark glassmorphism interface, animated gradient hero section, real-time product search, and interactive 3D product cards with inline ordering:
+
+![Home Page](screenshots/home-page.png)
+
+### Add Product Page
+A frosted-glass form for creating new catalog products with floating label animations and Keycloak authentication guard:
+
+![Add Product Page](screenshots/add-product.png)
+
 ## How it connects
 
 ```mermaid
@@ -37,17 +49,6 @@ flowchart LR
 In Docker, the Angular app is compiled into static files and served by Nginx. The Nginx config routes all `/api/*` requests to the API Gateway over the internal Docker network, which means the frontend never makes cross-origin requests in production.
 
 For local development (`ng serve`), the Angular dev server runs on port 4200 and API calls go directly to `localhost:9000`.
-
-## Pages
-
-### Home page
-The main catalog view. Shows all products as 3D cards with hover effects, a search bar, and quantity controls. Orders are placed inline with animated feedback.
-
-### Add product
-A glassmorphism form for adding new products. Only visible when signed in. Shows a success state with a link back to the catalog after creating a product.
-
-### Header
-Frosted-glass navigation bar with sign in/out, username display, and route links.
 
 ## Authentication
 
@@ -112,6 +113,10 @@ src/
 │       └── header/                  # Navigation bar component
 ├── index.html                       # Google Fonts, meta tags, theme color
 └── styles.css                       # Global dark theme + animations
+
+screenshots/
+├── home-page.png                    # Redesigned dark-theme catalog screenshot
+└── add-product.png                  # Add product form screenshot
 
 nginx.conf                          # Production Nginx configuration
 Dockerfile                           # Multi-stage build (Node + Nginx)
